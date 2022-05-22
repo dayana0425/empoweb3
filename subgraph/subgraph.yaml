@@ -10,6 +10,7 @@ dataSources:
     network: near-testnet
     source:
       account: "db1.testnet"
+      startBlock: 53472065
     mapping:
       apiVersion: 0.0.5
       language: wasm/assemblyscript

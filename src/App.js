@@ -34,12 +34,12 @@ export default function App() {
             id: `${window.accountId}-go-team-token`,
           })
         );
-
         setuserHasNFT(
           await window.contract.check_token({
             id: `${window.accountId}-go-team-token`,
           })
         );
+
       }
     };
     receivedNFT();
@@ -58,7 +58,7 @@ export default function App() {
               height='30'
               className='d-inline-block align-top'
             />{" "}
-            EMPOWEB3 
+            EMPOWEB3 💪 
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
@@ -78,12 +78,6 @@ export default function App() {
       <Container style={{ marginTop: "3vh" }}>
         {" "}
         <Row>
-          <Alert>
-            Create your NFT Profile & View on: {" "}
-            <a href='https://wallet.testnet.near.org/'>
-              wallet.testnet.near.org
-            </a>{" "}
-          </Alert>
         </Row>
         <Row>
           <InfoBubble />

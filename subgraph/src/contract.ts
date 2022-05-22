@@ -6,26 +6,41 @@ export function handleReceipt(
 ): void {
   const actions = receipt.receipt.actions;
   for (let i = 0; i < actions.length; i++) {
-    handleAction(actions[i], receipt)
+    handleAction(actions[i], receipt, receipt.outcome)
   }
 }
+
 function handleAction(
   action: near.ActionValue,
-  receiptWithOutcome: near.ReceiptWithOutcome
+  receiptWithOutcome: near.ReceiptWithOutcome,
+  test: near.ExecutionOutcome
 ): void {
-
+  log.info("length: {}", [test.logs.length.toString()])
   if (action.kind != near.ActionKind.FUNCTION_CALL) {
-    return;
+    log.info("Early return: {}", ["Not a function call"]);
+    return; 
   }
+
+  log.info("Didn't return: {}", ["It is a function call"]);
 
   const outcome = receiptWithOutcome.outcome;
   const functionCall = action.toFunctionCall();
   const ipfsHash = 'bafybeiew2l6admor2lx6vnfdaevuuenzgeyrpfle56yrgse4u6nnkwrfeu'
   const methodName = functionCall.methodName
 
-  if (methodName == 'new_default_meta' || methodName == 'nft_mint') {
+  log.info("methodName: {}", ["Made it: " + methodName]);
+
+  if (methodName == 'nft_mint') {
+    let val = methodName == 'nft_mint'
+    let str_val = val.toString()
+    log.info("Made it? methodName == 'nft_mint' {}", ["Made it: " + str_val]);
+    if(outcome.logs[0]){
+      log.info("LENGTH", [outcome.logs.length.toString()])
+    }
+
     for (let logIndex = 0; logIndex < outcome.logs.length; logIndex++) {
       let outcomeLog = outcome.logs[logIndex].toString();
+      log.info("outcome: {}", [outcomeLog])
 
       let parsed = outcomeLog.replace('EVENT_JSON:', '')
 

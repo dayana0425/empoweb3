@@ -2,8 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Form, Button, Card, Container, Row, Alert } from "react-bootstrap";
 import { keys } from "regenerator-runtime";
-const BN = require("bn.js");
+import NFT1 from "../assets/NFT1-100.jpg";
+import NFT2 from "../assets/NFT2-100.jpg"
+import NFT3 from "../assets/NFT3-100.jpg";
+import NFT4 from "../assets/NF4-100.jpg";
+import NFT5 from "../assets/NFT5-100.jpg";
 
+
+const BN = require("bn.js");
 const MintingTool = (props) => {
   const mintNFT = async () => {
     await window.contract.nft_mint(
@@ -27,31 +33,92 @@ const MintingTool = (props) => {
       <Container>
         <Row style={{ marginBottom: "2vh" }}>
           <p>
-            Step 2: Add skills to represent your NFT's attributes & then mint your Profile NFT{" "}
+          <h2> Find Your Web3 Mentor - Explore NFT Profiles! ✨</h2>
           </p>
         </Row>
         <Row className='d-flex justify-content-center'>
-          <Button
-            disabled={props.userNFTStatus || window.accountId === ""}
-            onClick={mintNFT}
-            style={{ width: "50vw" }}
-          >
-            Mint NFT
-          </Button>
         </Row>
         <Row className='d-flex justify-content-center'>
-          {console.log(props.userNFTStatus)}
-          {props.userNFTStatus ? (
-            <Alert variant='danger' style={{ marginTop: "2vh" }}>
-              <p style={{ textAlign: "center" }}>
-                bruh/sis.... You have an NFT already. You can see it{" "}
-                <a href={"https://wallet.testnet.near.org/?tab=collectibles"}>
-                  here!
-                </a>
-                :)
-              </p>
-            </Alert>
-          ) : null}
+          <Alert variant='danger' style={{ marginTop: "2vh" }}>
+          <h2> Lena </h2>
+          <img src={NFT1} height={200} width={200} />
+          <p>
+            Skills:
+            <ul>
+              <li><b>Developer</b>: Expert</li>
+              <li><b>Hacker</b>: Advanced</li>
+              <li><b>Hackathons</b>: Expert</li>
+              <li><b>Mentor_level</b>: Silver</li>
+              <li><b>Mentoring</b>: Silver</li>
+              <li><b>Founder</b>: Expert</li>
+              <li><b>Conference</b>: Activate_Miami_2022</li>
+            </ul>
+          </p>
+          </Alert>
+          <Alert variant='primary' style={{ marginTop: "2vh" }}>
+          <h2> Yip </h2>
+          <img src={NFT2} height={200} width={200} />
+          <p>
+            Skills:
+            <ul>
+              <li><b>Developer</b>: Medium</li>
+              <li><b>Hacker</b>: Medium</li>
+              <li><b>Hackathons</b>: Expert</li>
+              <li><b>Mentor_level</b>: Gold</li>
+              <li><b>Mentoring</b>: Expert</li>
+              <li><b>Founder</b>: Beginner</li>
+              <li><b>Conference</b>: Activate_Miami_2022</li>
+            </ul>
+          </p>
+          </Alert>
+          <Alert variant='secondary' style={{ marginTop: "2vh" }}>
+          <h2> Laura </h2>
+          <img src={NFT3} height={200} width={200} />
+          <p>
+            Skills:
+            <ul>
+              <li><b>Developer</b>: Medium</li>
+              <li><b>Hacker</b>: Beginner</li>
+              <li><b>Hackathons</b>: Medium</li>
+              <li><b>Mentor_level</b>: Gold</li>
+              <li><b>Mentoring</b>: Expert</li>
+              <li><b>Founder</b>: Beginner</li>
+              <li><b>Conference</b>: Activate_Miami_2022</li>
+            </ul>
+          </p>
+          </Alert>
+          <Alert variant='warning' style={{ marginTop: "2vh" }}>
+          <h2> Diana </h2>
+          <img src={NFT4} height={200} width={200} />
+          <p>
+            Skills:
+            <ul>
+              <li><b>Developer</b>: Medium</li>
+              <li><b>Hacker</b>: Beginner</li>
+              <li><b>Hackathons</b>: Medium</li>
+              <li><b>Mentor_level</b>: Silver</li>
+              <li><b>Mentoring</b>: Expert</li>
+              <li><b>Founder</b>: Beginner</li>
+              <li><b>Conference</b>: Activate_Miami_2022</li>
+            </ul>
+          </p>
+          </Alert>
+          <Alert variant='secondary' style={{ marginTop: "2vh" }}>
+          <h2> Shan </h2>
+          <img src={NFT5} height={200} width={200} />
+          <p>
+            Skills:
+            <ul>
+              <li><b>Developer</b>: Medium</li>
+              <li><b>Hacker</b>: Expert</li>
+              <li><b>Hackathons</b>: Medium</li>
+              <li><b>Mentor_level</b>: Gold</li>
+              <li><b>Mentoring</b>: Expert</li>
+              <li><b>Founder</b>: Beginner</li>
+              <li><b>Conference</b>: Activate_Miami_2022</li>
+            </ul>
+          </p>
+          </Alert>
         </Row>
       </Container>
     </Card>
