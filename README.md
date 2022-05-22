@@ -1,4 +1,4 @@
-nft-mint-frontend
+empoweb3
 ==================
 
 This [React] app was initialized with [create-near-app]
