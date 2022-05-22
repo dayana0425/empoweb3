@@ -1,4 +1,4 @@
-import "regenerator-runtime/runtime";
+import "regenerator-runtime";
 import React, { useEffect, useState } from "react";
 import { login, logout } from "./utils";
 
@@ -58,7 +58,7 @@ export default function App() {
               height='30'
               className='d-inline-block align-top'
             />{" "}
-            NEAR Protocol
+            EMPOWEB3 
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
@@ -79,12 +79,10 @@ export default function App() {
         {" "}
         <Row>
           <Alert>
-            Hello! We are going to mint an NFT and have it appear in your
-            wallet! Sign in, mint your nft and head over to{" "}
+            Create your NFT Profile & View on: {" "}
             <a href='https://wallet.testnet.near.org/'>
               wallet.testnet.near.org
             </a>{" "}
-            to see your new "Go Team" NFT!
           </Alert>
         </Row>
         <Row>

@@ -14,7 +14,7 @@ Exploring The Code
 ==================
 
 1. The main smart contract code lives in `src/lib.rs`. You can compile it with
-   the `./compile` script.
+   the `./build.sh ./compile` script.
 2. Tests: You can run smart contract tests with the `./test` script. This runs
    standard Rust tests using [cargo] with a `--nocapture` flag so that you
    can see any debug info you print to the console.

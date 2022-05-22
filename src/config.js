@@ -1,4 +1,4 @@
-const CONTRACT_NAME = "nft-frontend-simple-mint.blockhead.testnet";
+const CONTRACT_NAME = "empoweb3-contract.testnet";
 
 function getConfig(env) {
   switch (env) {

@@ -6,7 +6,7 @@ import { login, logout } from "../utils";
 const InfoBubble = (props) => {
   return (
     <Card style={{ padding: "3vh" }}>
-      Step 1: Hit this button to login!
+      Step 1: Connect your NEAR Wallet
       <Row className='d-flex justify-content-center'>
         <Button
           style={{ width: "50vw" }}

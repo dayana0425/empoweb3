@@ -27,10 +27,7 @@ const MintingTool = (props) => {
       <Container>
         <Row style={{ marginBottom: "2vh" }}>
           <p>
-            Step 2: After you have logged in, hit this button to mint your "Go
-            Team" Token and go your{" "}
-            <a href='https://wallet.testnet.near.org/'> wallet</a> and see your
-            NFT
+            Step 2: Add skills to represent your NFT's attributes & then mint your Profile NFT{" "}
           </p>
         </Row>
         <Row className='d-flex justify-content-center'>
