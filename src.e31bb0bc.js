@@ -66474,7 +66474,17 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Accordion":"../node_modules/react-bootstrap/esm/Accordion.js","./AccordionContext":"../node_modules/react-bootstrap/esm/AccordionContext.js","./AccordionCollapse":"../node_modules/react-bootstrap/esm/AccordionCollapse.js","./AccordionButton":"../node_modules/react-bootstrap/esm/AccordionButton.js","./Alert":"../node_modules/react-bootstrap/esm/Alert.js","./Anchor":"../node_modules/react-bootstrap/esm/Anchor.js","./Badge":"../node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"../node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"../node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"../node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"../node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"../node_modules/react-bootstrap/esm/Card.js","./CardImg":"../node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"../node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"../node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"../node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"../node_modules/react-bootstrap/esm/CloseButton.js","./Col":"../node_modules/react-bootstrap/esm/Col.js","./Collapse":"../node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"../node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"../node_modules/react-bootstrap/esm/DropdownButton.js","./Fade":"../node_modules/react-bootstrap/esm/Fade.js","./Form":"../node_modules/react-bootstrap/esm/Form.js","./FormControl":"../node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"../node_modules/react-bootstrap/esm/FormCheck.js","./FormFloating":"../node_modules/react-bootstrap/esm/FormFloating.js","./FloatingLabel":"../node_modules/react-bootstrap/esm/FloatingLabel.js","./FormGroup":"../node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"../node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"../node_modules/react-bootstrap/esm/FormText.js","./FormSelect":"../node_modules/react-bootstrap/esm/FormSelect.js","./Container":"../node_modules/react-bootstrap/esm/Container.js","./Image":"../node_modules/react-bootstrap/esm/Image.js","./Figure":"../node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"../node_modules/react-bootstrap/esm/InputGroup.js","./ListGroup":"../node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"../node_modules/react-bootstrap/esm/ListGroupItem.js","./Modal":"../node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"../node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"../node_modules/react-bootstrap/esm/ModalDialog.js","./ModalHeader":"../node_modules/react-bootstrap/esm/ModalHeader.js","./ModalFooter":"../node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"../node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"../node_modules/react-bootstrap/esm/Nav.js","./Navbar":"../node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"../node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"../node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"../node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"../node_modules/react-bootstrap/esm/NavLink.js","./Offcanvas":"../node_modules/react-bootstrap/esm/Offcanvas.js","./OffcanvasHeader":"../node_modules/react-bootstrap/esm/OffcanvasHeader.js","./OffcanvasTitle":"../node_modules/react-bootstrap/esm/OffcanvasTitle.js","./OffcanvasBody":"../node_modules/react-bootstrap/esm/OffcanvasBody.js","./Overlay":"../node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"../node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"../node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"../node_modules/react-bootstrap/esm/Pagination.js","./Placeholder":"../node_modules/react-bootstrap/esm/Placeholder.js","./PlaceholderButton":"../node_modules/react-bootstrap/esm/PlaceholderButton.js","./Popover":"../node_modules/react-bootstrap/esm/Popover.js","./PopoverHeader":"../node_modules/react-bootstrap/esm/PopoverHeader.js","./PopoverBody":"../node_modules/react-bootstrap/esm/PopoverBody.js","./ProgressBar":"../node_modules/react-bootstrap/esm/ProgressBar.js","./Ratio":"../node_modules/react-bootstrap/esm/Ratio.js","./Row":"../node_modules/react-bootstrap/esm/Row.js","./Spinner":"../node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"../node_modules/react-bootstrap/esm/SplitButton.js","./SSRProvider":"../node_modules/react-bootstrap/esm/SSRProvider.js","./Stack":"../node_modules/react-bootstrap/esm/Stack.js","./Tab":"../node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"../node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"../node_modules/react-bootstrap/esm/TabContent.js","./Table":"../node_modules/react-bootstrap/esm/Table.js","./TabPane":"../node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"../node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./Toast":"../node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"../node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"../node_modules/react-bootstrap/esm/ToastHeader.js","./ToastContainer":"../node_modules/react-bootstrap/esm/ToastContainer.js","./ToggleButton":"../node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"../node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"../node_modules/react-bootstrap/esm/Tooltip.js"}],"Components/MintingTool.js":[function(require,module,exports) {
+},{"./Accordion":"../node_modules/react-bootstrap/esm/Accordion.js","./AccordionContext":"../node_modules/react-bootstrap/esm/AccordionContext.js","./AccordionCollapse":"../node_modules/react-bootstrap/esm/AccordionCollapse.js","./AccordionButton":"../node_modules/react-bootstrap/esm/AccordionButton.js","./Alert":"../node_modules/react-bootstrap/esm/Alert.js","./Anchor":"../node_modules/react-bootstrap/esm/Anchor.js","./Badge":"../node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"../node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"../node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"../node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"../node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"../node_modules/react-bootstrap/esm/Card.js","./CardImg":"../node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"../node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"../node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"../node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"../node_modules/react-bootstrap/esm/CloseButton.js","./Col":"../node_modules/react-bootstrap/esm/Col.js","./Collapse":"../node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"../node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"../node_modules/react-bootstrap/esm/DropdownButton.js","./Fade":"../node_modules/react-bootstrap/esm/Fade.js","./Form":"../node_modules/react-bootstrap/esm/Form.js","./FormControl":"../node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"../node_modules/react-bootstrap/esm/FormCheck.js","./FormFloating":"../node_modules/react-bootstrap/esm/FormFloating.js","./FloatingLabel":"../node_modules/react-bootstrap/esm/FloatingLabel.js","./FormGroup":"../node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"../node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"../node_modules/react-bootstrap/esm/FormText.js","./FormSelect":"../node_modules/react-bootstrap/esm/FormSelect.js","./Container":"../node_modules/react-bootstrap/esm/Container.js","./Image":"../node_modules/react-bootstrap/esm/Image.js","./Figure":"../node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"../node_modules/react-bootstrap/esm/InputGroup.js","./ListGroup":"../node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"../node_modules/react-bootstrap/esm/ListGroupItem.js","./Modal":"../node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"../node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"../node_modules/react-bootstrap/esm/ModalDialog.js","./ModalHeader":"../node_modules/react-bootstrap/esm/ModalHeader.js","./ModalFooter":"../node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"../node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"../node_modules/react-bootstrap/esm/Nav.js","./Navbar":"../node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"../node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"../node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"../node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"../node_modules/react-bootstrap/esm/NavLink.js","./Offcanvas":"../node_modules/react-bootstrap/esm/Offcanvas.js","./OffcanvasHeader":"../node_modules/react-bootstrap/esm/OffcanvasHeader.js","./OffcanvasTitle":"../node_modules/react-bootstrap/esm/OffcanvasTitle.js","./OffcanvasBody":"../node_modules/react-bootstrap/esm/OffcanvasBody.js","./Overlay":"../node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"../node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"../node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"../node_modules/react-bootstrap/esm/Pagination.js","./Placeholder":"../node_modules/react-bootstrap/esm/Placeholder.js","./PlaceholderButton":"../node_modules/react-bootstrap/esm/PlaceholderButton.js","./Popover":"../node_modules/react-bootstrap/esm/Popover.js","./PopoverHeader":"../node_modules/react-bootstrap/esm/PopoverHeader.js","./PopoverBody":"../node_modules/react-bootstrap/esm/PopoverBody.js","./ProgressBar":"../node_modules/react-bootstrap/esm/ProgressBar.js","./Ratio":"../node_modules/react-bootstrap/esm/Ratio.js","./Row":"../node_modules/react-bootstrap/esm/Row.js","./Spinner":"../node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"../node_modules/react-bootstrap/esm/SplitButton.js","./SSRProvider":"../node_modules/react-bootstrap/esm/SSRProvider.js","./Stack":"../node_modules/react-bootstrap/esm/Stack.js","./Tab":"../node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"../node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"../node_modules/react-bootstrap/esm/TabContent.js","./Table":"../node_modules/react-bootstrap/esm/Table.js","./TabPane":"../node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"../node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./Toast":"../node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"../node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"../node_modules/react-bootstrap/esm/ToastHeader.js","./ToastContainer":"../node_modules/react-bootstrap/esm/ToastContainer.js","./ToggleButton":"../node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"../node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"../node_modules/react-bootstrap/esm/Tooltip.js"}],"assets/NFT1-100.jpg":[function(require,module,exports) {
+module.exports = "/NFT1-100.0bc64ecd.jpg";
+},{}],"assets/NFT2-100.jpg":[function(require,module,exports) {
+module.exports = "/NFT2-100.a89d79fd.jpg";
+},{}],"assets/NFT3-100.jpg":[function(require,module,exports) {
+module.exports = "/NFT3-100.60948483.jpg";
+},{}],"assets/NF4-100.jpg":[function(require,module,exports) {
+module.exports = "/NF4-100.eb525e14.jpg";
+},{}],"assets/NFT5-100.jpg":[function(require,module,exports) {
+module.exports = "/NFT5-100.80075252.jpg";
+},{}],"Components/MintingTool.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66489,6 +66499,16 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _reactBootstrap = require("react-bootstrap");
 
 var _regeneratorRuntime = require("regenerator-runtime");
+
+var _NFT = _interopRequireDefault(require("../assets/NFT1-100.jpg"));
+
+var _NFT2 = _interopRequireDefault(require("../assets/NFT2-100.jpg"));
+
+var _NFT3 = _interopRequireDefault(require("../assets/NFT3-100.jpg"));
+
+var _NF = _interopRequireDefault(require("../assets/NF4-100.jpg"));
+
+var _NFT4 = _interopRequireDefault(require("../assets/NFT5-100.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66516,36 +66536,62 @@ const MintingTool = props => {
     style: {
       marginBottom: "2vh"
     }
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Step 2: After you have logged in, hit this button to mint your \"Go Team\" Token and go your", " ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://wallet.testnet.near.org/"
-  }, " wallet"), " and see your NFT")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+  }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("h2", null, " Find Your Web3 Mentor - Explore NFT Profiles! \u2728"))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "d-flex justify-content-center"
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
-    disabled: props.userNFTStatus || window.accountId === "",
-    onClick: mintNFT,
-    style: {
-      width: "50vw"
-    }
-  }, "Mint NFT")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "d-flex justify-content-center"
-  }, console.log(props.userNFTStatus), props.userNFTStatus ? /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
     variant: "danger",
     style: {
       marginTop: "2vh"
     }
-  }, /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, " Lena "), /*#__PURE__*/_react.default.createElement("img", {
+    src: _NFT.default,
+    height: 200,
+    width: 200
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Skills:", /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Developer"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hacker"), ": Advanced"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hackathons"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentor_level"), ": Silver"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentoring"), ": Silver"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Founder"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Conference"), ": Activate_Miami_2022")))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
+    variant: "primary",
     style: {
-      textAlign: "center"
+      marginTop: "2vh"
     }
-  }, "bruh/sis.... You have an NFT already. You can see it", " ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://wallet.testnet.near.org/?tab=collectibles"
-  }, "here!"), ":)")) : null)));
+  }, /*#__PURE__*/_react.default.createElement("h2", null, " Yip "), /*#__PURE__*/_react.default.createElement("img", {
+    src: _NFT2.default,
+    height: 200,
+    width: 200
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Skills:", /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Developer"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hacker"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hackathons"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentor_level"), ": Gold"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentoring"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Founder"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Conference"), ": Activate_Miami_2022")))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
+    variant: "secondary",
+    style: {
+      marginTop: "2vh"
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", null, " Laura "), /*#__PURE__*/_react.default.createElement("img", {
+    src: _NFT3.default,
+    height: 200,
+    width: 200
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Skills:", /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Developer"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hacker"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hackathons"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentor_level"), ": Gold"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentoring"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Founder"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Conference"), ": Activate_Miami_2022")))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
+    variant: "warning",
+    style: {
+      marginTop: "2vh"
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", null, " Diana "), /*#__PURE__*/_react.default.createElement("img", {
+    src: _NF.default,
+    height: 200,
+    width: 200
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Skills:", /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Developer"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hacker"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hackathons"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentor_level"), ": Silver"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentoring"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Founder"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Conference"), ": Activate_Miami_2022")))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, {
+    variant: "secondary",
+    style: {
+      marginTop: "2vh"
+    }
+  }, /*#__PURE__*/_react.default.createElement("h2", null, " Shan "), /*#__PURE__*/_react.default.createElement("img", {
+    src: _NFT4.default,
+    height: 200,
+    width: 200
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Skills:", /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Developer"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hacker"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Hackathons"), ": Medium"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentor_level"), ": Gold"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Mentoring"), ": Expert"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Founder"), ": Beginner"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("b", null, "Conference"), ": Activate_Miami_2022")))))));
 };
 
 MintingTool.propTypes = {};
 var _default = MintingTool;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","bn.js":"../node_modules/bn.js/lib/bn.js"}],"Components/InfoBubble.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","../assets/NFT1-100.jpg":"assets/NFT1-100.jpg","../assets/NFT2-100.jpg":"assets/NFT2-100.jpg","../assets/NFT3-100.jpg":"assets/NFT3-100.jpg","../assets/NF4-100.jpg":"assets/NF4-100.jpg","../assets/NFT5-100.jpg":"assets/NFT5-100.jpg","bn.js":"../node_modules/bn.js/lib/bn.js"}],"Components/InfoBubble.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66568,7 +66614,7 @@ const InfoBubble = props => {
     style: {
       padding: "3vh"
     }
-  }, "Step 1: Hit this button to login!", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+  }, "Step 1: Connect your NEAR Wallet", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "d-flex justify-content-center"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
     style: {
@@ -66591,7 +66637,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = App;
 
-require("regenerator-runtime/runtime");
+require("regenerator-runtime");
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -66654,7 +66700,7 @@ function App() {
     width: "30",
     height: "30",
     className: "d-inline-block align-top"
-  }), " ", "NEAR Protocol"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
+  }), " ", "EMPOWEB3 \uD83D\uDCAA"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
     "aria-controls": "responsive-navbar-nav"
   }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "responsive-navbar-nav"
@@ -66666,9 +66712,7 @@ function App() {
     style: {
       marginTop: "3vh"
     }
-  }, " ", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Alert, null, "Hello! We are going to mint an NFT and have it appear in your wallet! Sign in, mint your nft and head over to", " ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://wallet.testnet.near.org/"
-  }, "wallet.testnet.near.org"), " ", "to see your new \"Go Team\" NFT!")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_InfoBubble.default, null)), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+  }, " ", /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_InfoBubble.default, null)), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     style: {
       marginTop: "3vh"
     }
@@ -66676,7 +66720,7 @@ function App() {
     userNFTStatus: userHasNFT
   }))));
 }
-},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react":"../node_modules/react/index.js","./utils":"utils.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./Components/MintingTool":"Components/MintingTool.js","./Components/InfoBubble":"Components/InfoBubble.js","./assets/logo-white.svg":"assets/logo-white.svg","./config":"config.js"}],"index.js":[function(require,module,exports) {
+},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","react":"../node_modules/react/index.js","./utils":"utils.js","bootstrap/dist/css/bootstrap.min.css":"../node_modules/bootstrap/dist/css/bootstrap.min.css","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./Components/MintingTool":"Components/MintingTool.js","./Components/InfoBubble":"Components/InfoBubble.js","./assets/logo-white.svg":"assets/logo-white.svg","./config":"config.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -66720,7 +66764,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58158" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63403" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
