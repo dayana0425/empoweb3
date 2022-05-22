@@ -42,6 +42,7 @@ const MintingTool = (props) => {
           <Alert variant='danger' style={{ marginTop: "2vh" }}>
           <h2> Lena </h2>
           <img src={NFT1} height={200} width={200} />
+          <a href="https://demo.storj-ipfs.com/ipfs/QmXmYwpDNmfzN1sk7VY4XCWuNdmmXTZzgX4ba9i38wtk6z">media</a>
           <p>
             Skills:
             <ul>
