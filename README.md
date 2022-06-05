@@ -1,4 +1,4 @@
-empoweb3 : https://dayana0425.github.io/empoweb3-proj/
+empoweb3 : https://dayana0425.github.io/empoweb3/
 ==================
 
 This [React] app was initialized with [create-near-app]
